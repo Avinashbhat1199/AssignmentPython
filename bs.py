@@ -21,11 +21,12 @@ import pymysql
 conn = pymysql.connect(
 		host='localhost',
 		user='root',
-		password = "",
-        db='test'
+		password = ""
+        
 		
 		)
 myc=conn.cursor()
+myc.execute("CREATE DATABASE test") 
 query = """CREATE TABLE fileop ( 
        filenam varchar(30) ) """
   
